@@ -33,34 +33,7 @@ CSS
 JavaScript
 
 ## BMI Formula Used
-𝐵
-𝑀
-𝐼
-=
-𝑤
-𝑒
-𝑖
-𝑔
-ℎ
-𝑡
-(
-𝑘
-𝑔
-)
-ℎ
-𝑒
-𝑖
-𝑔
-ℎ
-𝑡
-(
-𝑚
-)
-2
-BMI=
-height(m)
-2
-weight(kg)
+![BMI Formula](BMI_formula.png)
 	​
 
 ## How to Run
