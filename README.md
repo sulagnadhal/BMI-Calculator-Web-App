@@ -56,3 +56,7 @@ BMI_Calculator_Part2/
 ## Purpose
 
 This project is part of learning and practicing front-end development and JavaScript logic implementation.
+
+## Output
+![Application](output.png)
+
