@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BMICalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter height (in inches)" translatesAutoresizingMaskIntoConstraints="NO" id="heightField">
+                                <rect key="frame" x="96.666666666666686" y="179" width="200" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter weight (in pounds)" translatesAutoresizingMaskIntoConstraints="NO" id="weightField">
+                                <rect key="frame" x="96.666666666666686" y="233" width="200" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" contentMode="scaleToFill" text="BMI:" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmiTitle">
+                                <rect key="frame" x="96.666666666666671" y="307" width="34.000000000000014" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            </label>
+                            <label opaque="NO" contentMode="scaleToFill" text="-" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmiLabel">
+                                <rect key="frame" x="150.66666666666666" y="307" width="7.6666666666666572" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            </label>
+                            <label opaque="NO" contentMode="scaleToFill" text="RISK:" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="riskTitle">
+                                <rect key="frame" x="96.666666666666671" y="348" width="40.666666666666671" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            </label>
+                            <label opaque="NO" contentMode="scaleToFill" text="-" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="riskLabel">
+                                <rect key="frame" x="157.33333333333334" y="348" width="7.6666666666666572" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="callAPIButton">
+                                <rect key="frame" x="155" y="409" width="83" height="30"/>
+                                <state key="normal" title="Call BMI API"/>
+                                <connections>
+                                    <action selector="callAPI:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i16-Cx-uZ4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="educateMeButton">
+                                <rect key="frame" x="155.66666666666666" y="459" width="82" height="30"/>
+                                <state key="normal" title="Educate Me"/>
+                                <connections>
+                                    <action selector="educateMe:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ied-KC-SzT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="safeArea"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="heightField" firstAttribute="top" secondItem="safeArea" secondAttribute="top" constant="120" id="c1"/>
+                            <constraint firstItem="bmiLabel" firstAttribute="centerY" secondItem="bmiTitle" secondAttribute="centerY" id="c10"/>
+                            <constraint firstItem="riskTitle" firstAttribute="top" secondItem="bmiTitle" secondAttribute="bottom" constant="20" id="c11"/>
+                            <constraint firstItem="riskTitle" firstAttribute="leading" secondItem="bmiTitle" secondAttribute="leading" id="c12"/>
+                            <constraint firstItem="riskLabel" firstAttribute="leading" secondItem="riskTitle" secondAttribute="trailing" constant="20" id="c13"/>
+                            <constraint firstItem="riskLabel" firstAttribute="centerY" secondItem="riskTitle" secondAttribute="centerY" id="c14"/>
+                            <constraint firstItem="callAPIButton" firstAttribute="top" secondItem="riskTitle" secondAttribute="bottom" constant="40" id="c15"/>
+                            <constraint firstItem="callAPIButton" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c16"/>
+                            <constraint firstItem="educateMeButton" firstAttribute="top" secondItem="callAPIButton" secondAttribute="bottom" constant="20" id="c17"/>
+                            <constraint firstItem="educateMeButton" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c18"/>
+                            <constraint firstItem="heightField" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c2"/>
+                            <constraint firstItem="heightField" firstAttribute="width" constant="200" id="c3"/>
+                            <constraint firstItem="weightField" firstAttribute="top" secondItem="heightField" secondAttribute="bottom" constant="20" id="c4"/>
+                            <constraint firstItem="weightField" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c5"/>
+                            <constraint firstItem="weightField" firstAttribute="width" constant="200" id="c6"/>
+                            <constraint firstItem="bmiTitle" firstAttribute="top" secondItem="weightField" secondAttribute="bottom" constant="40" id="c7"/>
+                            <constraint firstItem="bmiTitle" firstAttribute="leading" secondItem="weightField" secondAttribute="leading" id="c8"/>
+                            <constraint firstItem="bmiLabel" firstAttribute="leading" secondItem="bmiTitle" secondAttribute="trailing" constant="20" id="c9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bmiLabel" destination="bmiLabel" id="o1"/>
+                        <outlet property="heightField" destination="heightField" id="o3"/>
+                        <outlet property="riskLabel" destination="riskLabel" id="o2"/>
+                        <outlet property="weightField" destination="weightField" id="o4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="80" y="-1"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
