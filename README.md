@@ -58,5 +58,4 @@ BMI_Calculator_Part2/
 This project is part of learning and practicing front-end development and JavaScript logic implementation.
 
 ## Output
-![Application](output.png)
-
+![Output_App](output.png)
