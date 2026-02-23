@@ -24,7 +24,7 @@ Obese
 
 Input validation
 
-🛠 Technologies Used
+## Technologies Used
 
 HTML
 
